@@ -1,0 +1,46 @@
+package ClassGrades1;
+
+import java.util.Scanner;
+
+import javax.xml.stream.events.EndDocument;
+
+public class Grades {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		double sum = 0;
+		double maxGrade = Double.NEGATIVE_INFINITY;
+		double minGrade = Double.POSITIVE_INFINITY;
+		
+		double[] grades =  {98.1f, 90.6f, 87.6f, 90.3f, 88.8f, 99.3f, 78.9f, 98.7f, 77.7f, 87.4f};
+		
+		for (int i = 0; i < 10; i++) {
+			double grade = grades[i];
+			
+			if (grade >= 0 && grade <= 100) {
+				sum += grade;
+			}	
+			
+			if (grade > maxGrade) {
+				maxGrade = grade;
+			}
+			
+			if (grade < minGrade) {
+				minGrade = grade;
+			}
+			
+		}
+			
+			double average = sum/10;
+			
+			System.out.println("Average: " + average);
+			System.out.println("Max Grade: " + maxGrade);
+			System.out.println("Min Grade: " + minGrade);
+			
+			scanner.close();	
+			
+		}
+}
+		
